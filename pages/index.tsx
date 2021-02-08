@@ -54,7 +54,7 @@ const index: React.FC  = ()=> {
       </div>
     </div>
 
-    <div className={styles.container}>
+    <div id={styles.container} className="text-center">
       {(recipes.length > 0) ? 
       recipes.map((r,index)=>(
         <div key={index} id={styles.card} className="card" >
@@ -68,7 +68,9 @@ const index: React.FC  = ()=> {
             
           </div>
       </div>
-      )) : null }
+      )) : <div className="text-center mx-auto">
+        <h3 className="text-center mx-auto">No Recipes found</h3>
+      </div> }
     </div>
 
     </div>

@@ -11,7 +11,7 @@ border: 2px solid red;
   
 }
 
-.container{
+#container{
   margin-top: 5rem;
   margin-bottom: 5rem;
   display: flex;
@@ -30,4 +30,7 @@ margin-right: auto;
 #food {
   width: 100%;
   height:80%;
+}
+.text-center{
+  text-align: end;
 }

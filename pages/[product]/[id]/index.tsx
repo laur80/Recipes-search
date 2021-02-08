@@ -1,16 +1,17 @@
 import Image from 'next/image';
 import axios from 'axios';
 import styles from '../../../styles/Product.module.css';
+import { GetServerSideProps } from 'next';
 
-export const getServerSideProps= async(context) => {
+export const getServerSideProps: GetServerSideProps= async(context) => {
   const APP_ID = '023ea4e4';
   const APP_KEY = 'd8a0fa7d4333313a13ac6b00465b9819';
-  let id= context.params.id;
-  let product = context.params.product;
+  let id= context.params.id.toString();
+  let product = context.params.product.toString();
   let URL = `https://api.edamam.com/search?q=${product}&app_id=${APP_ID}&app_key=${APP_KEY}`
  
   const res = await axios(URL)
-  console.log(res);
+  // console.log(res);
   
   if (!res) {
     return {
